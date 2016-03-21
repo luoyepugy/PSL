@@ -1,0 +1,117 @@
+
+@import 'custom/custom.scss';
+@import 'custom/mixin.scss';
+
+// bootstrap
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    padding-left: 0;
+    padding-right: 0;
+}
+.container {
+    background: #fff;
+}
+
+// icon
+@include size-icon(210,90);
+@include size-icon(310,380);
+@include size-icon(230,185);
+
+
+// 标题
+.slogan {
+    text-align: center;
+    margin: 50px 0;
+}
+.title {
+    text-align: left;
+    line-height: 40px;
+}
+.text {
+    color: #8a8a8a;
+    font-size: 16px;
+}
+
+// 导航
+.nav {
+    background: #fff;  
+    @include size(100%, 110px);
+    @include link-a(#000, $main_blue);
+    line-height: 110px;
+    box-shadow: 2px 1px 10px 2px #555;
+    z-index: 100;
+    li {
+        margin-right: 50px;
+    }
+    .container {
+        background: transparent;
+    }
+    a {
+        position: relative;
+    }
+    a.active {
+        color: $main_blue;
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 20px;
+            @include size(10px);
+            background: $main_blue;
+            border-radius: 5px;
+        }
+    }
+}
+.nav-index {
+    @include position-basic(absolute,top,0, left,0);
+    background: rgba(255,255,255,.5);
+}
+
+// 地图
+.map {
+    height: 500px;
+}
+
+// 底部
+.footer {
+    background: #1d2024;
+    font-size: 16px;
+    .container {
+        background: #1d2024;
+    }
+    @include link-a(#fff);
+    .about {
+        margin: 30px 0;
+        a {
+            line-height: 40px;
+        }
+    }
+    .social-icon {
+        @include size(40px);
+        text-align: center;
+        border-radius: 20px;
+        @include inline-block;
+        i {
+            font-size: 26px;
+            color: #fff;
+        }
+    }
+    .copyright {
+        @include line-height(80px);
+        text-align: center;
+        border-top: 1px solid #32373d;
+        color:  #32373d;
+    }
+}
+
+// 水平绝对居中
+.center {
+    @include position-centerH(1024px, relative);
+}
+
+
+// 颜色
+@include color('gray', '#bfbfbf');
+@include color('dark-blue', '#30318b');
+@include color('red', '#e60012');
+@include color('white');
+@include color('black');

@@ -1,0 +1,196 @@
+
+@import '../custom/custom.scss';
+@import '../custom/mixin.scss';
+
+
+// banner图
+.banner {
+    position: relative;
+    img {
+        width: 100%;
+        // height: 416px;
+    }
+    .arrow-left, .arrow-right {
+        @include size(25px, 50px);
+        @include skin-bgfg(lighten($main-red, 40%), #fff);
+        position: absolute;
+        bottom: 183px;
+        line-height: 50px;
+        text-align: center;
+    }
+    .arrow-left {
+        left: 0;
+    }
+    .arrow-right {
+        right: 0;
+    }
+}
+ 
+// 业务
+.business-nav {
+    @include skin-bgfg($main-red, #fff);
+    line-height: 70px;
+    height: 70px;
+    &>li {
+        width: 128px;
+        float: left;
+        cursor: pointer;
+        &:first-child::before {
+            content: "\e606";
+            position: absolute;
+            @include size(0);
+            line-height: 0;
+            border-top: 4px solid #fff;
+            margin-left: 70px;
+        }
+    }
+    span {
+        position: relative;
+        bottom: 12px;
+    }
+}
+.business-content {
+    margin-bottom: 25px;
+    li {
+        @include inline-block;
+        width: 31.5%;
+        padding-left: 14px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+// 包裹追踪
+.searchPackage {
+    font-size: 18px;
+    overflow: hidden;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    @include position-basic(absolute, left, 0 , bottom, 84px);
+    border: 1px solid #bebebe;
+    border-bottom: 0;
+    @include size(410px, 127px);
+    .tabs {
+        height: 45px;
+        li {
+            @include inside-center(205px, 45px);
+            float: left;
+            @include skin-bgfg(#bebebe, #fff);
+            &.active {
+                background: $main-red;
+            }
+        }
+    }
+    .tabs-content {
+        background: #fff;
+        padding: 20px;
+        p {
+            border-radius: 3px;
+            border: 1px solid #989898;
+            height: 40px;
+            box-shadow: 0 0 4px 1px #989898 inset;
+        }
+        input {
+            width: 310px;
+            line-height: 35px;
+            padding-left: 5px;
+            vertical-align: top;
+            border: 0;
+            outline: none;
+            margin-top: 2px;
+        }
+    }  
+}
+
+.infos {
+    @include clearfix;
+}
+// 行业新闻
+.news {
+    width: 320px;
+    float: left;
+}
+.news-title {
+    border-top: 3px solid #bfbfbf;
+    line-height: 40px;
+    color: #333;
+    span {
+        @include inline-block;
+        font-weight: 700;
+    }
+    .active {
+        border-top: 3px solid $main-red;
+        margin-top: -3px;
+        padding: 0 30px 0 5px;
+    }
+}
+.news-list {
+    li {
+        border-bottom: 1px dashed #ddd;
+        line-height: 39px;
+        @include overflow(ellipsis);
+    }
+    @include link-a(#6f6f6f);
+}
+
+// 企业介绍
+.company {
+    float: right;
+    width: 670px;
+    height: 275px;
+    border: 1px solid #ddd;
+
+    .tab-title {
+        @include clearfix;
+        font-weight: 700;
+        line-height: 40px;
+        margin-bottom: 0;
+        li {
+            float: left;
+            width: 180px;
+            cursor: pointer;
+            text-align: center;
+            @include skin-bgfg(#f5f5f5, #6f6f6f);
+            border: 1px solid #ddd;
+            border-top: 0;
+            &.active {
+                border: 0;
+                border-top: 3px solid #30318b;
+                @include skin-bgfg(#fff, #333);
+                margin-top: -2px;
+            }
+        }
+    }
+    .tab-content {
+        .introduce {
+            @include display-inline(250px, 350px);
+        }
+        padding: 0 15px 15px 15px;
+    }
+
+}
+
+
+// 友情链接
+.links {
+    border: 1px solid #ddd;
+    padding-bottom: 15px;
+    color: #bdbdbd;
+    ul {
+        width: 960px;
+        margin-left: 30px;
+    }
+    img {
+        max-height: 70px;
+    }
+    .left-arrow,.right-arrow {
+        position: absolute;
+        top: 25px;
+    }
+    .left-arrow {
+        left: 5px;
+    }
+    .right-arrow {
+        right: 5px;
+    }
+}
