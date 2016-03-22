@@ -37,10 +37,10 @@
 
 // 友情链接
 .links {
-    a {
+    .general {
         border-right: 1px solid #e9e9e9;
         border-bottom: 1px solid #e9e9e9;
-        display: block;
+        // display: block;
         &:nth-child(6),
         &:nth-child(12) {
             border-right: 0;
