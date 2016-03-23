@@ -37,6 +37,11 @@
     font-size: 16px;
 }
 
+// 宽度100%
+.w100 {
+    width: 100%;
+}
+
 // 导航
 .nav {
     background: #fff;  
@@ -73,6 +78,24 @@
 .nav-index {
     @include position-basic(absolute,top,0, left,0);
     background: rgba(255,255,255,.5);
+}
+
+// 子导航
+.sub-nav {
+    background: rgba(255,255,255,.9);
+    width: 100%;
+    @include line-height(60px);
+    @include position();
+    @include link-a(#333, $main_blue);
+    font-size: 16px;
+    border-top: 1px solid #ddd;
+}
+
+// 主标语，子页面第一句
+.main-slogan {
+    margin-top: -120px;
+    background: #fff;
+    padding: 50px 15px;
 }
 
 // 地图
