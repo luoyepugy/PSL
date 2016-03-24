@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>联系我们</title>
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/leaflet/leaflet.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <!-- 导航 -->
+    <div class="nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-9 col-sm-10">
+                    <ul>
+                        <li class="pull-left"><a href="case.html">案例</a></li>
+                        <li class="pull-left"><a href="service.html">服务</a></li>
+                        <li class="pull-left"><a href="about.html">关于</a></li>
+                        <li class="pull-left"><a class="active" href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-3 col-sm-2">
+                    <div class="logo pull-right"><a href="#"><img class="img-responsive" src="../images/logo.png" alt="logo"></a></div>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <!-- /导航 -->
+    <!-- banner图 -->
+    <div class="banner">
+        <img class="img-responsive" src="../images/about/core-banner.jpg" alt="banner图">
+    </div>
+    <!-- /banner图 -->
+    <!-- 企业信息 -->
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 main-slogan">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4"><img src="../images/vcode.jpg" alt="二维码"></div>
+                        <div class="col-xs-12 col-sm-8 info text">
+                            <p>公众号：鹏思立教育（persli-gd）</p>
+                            <p>新浪微博：魔法蘑菇越读馆</p>
+                            <p>地址：广东顺德大良嘉信城市广场一期东区三楼（万宁超市楼上）</p>
+                            <p>电话：0757-22918598</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 pure-text">
+                <div class="slogan">联系我们</div>
+                <div class="text">一封邮件或许正是成就一个出色产品的开端。欢迎填写表格或发送合作邮件至：<a href="#">service@eicodesign.com</a></div>
+                <form class="form-horizontal text">
+                  <div class="form-group">
+                        <label for="name" class="col-xs-3 col-sm-2 control-label">您的姓名：</label>
+                        <div class="col-xs-9 col-sm-3">
+                          <input type="text" class="form-control input" id="name" placeholder="">
+                        </div>
+                        <label for="company" class="col-xs-3 col-sm-2 control-label">公司名称：</label>
+                        <div class="col-xs-9 col-sm-3">
+                          <input type="text" class="form-control input" id="company" placeholder="">
+                        </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">您的邮箱：</label>
+                    <div class="col-xs-9 col-sm-3">
+                      <input type="email" class="form-control input" id="email" placeholder="">
+                    </div>
+                    <label for="telphone" class="col-sm-2 control-label">联系电话：</label>
+                    <div class="col-xs-9 col-sm-3">
+                      <input type="text" class="form-control input" id="telphone" placeholder="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="website" class="col-sm-2 control-label">公司网站：</label>
+                    <div class="col-xs-9 col-sm-3">
+                      <input type="text" class="form-control input" id="website" placeholder="">
+                    </div>
+                    <label for="city" class="col-sm-2 control-label">所在城市：</label>
+                    <div class="col-xs-9 col-sm-3">
+                      <input type="text" class="form-control input" id="city" placeholder="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="project" class="col-sm-2 control-label">项目类型：</label>
+                    <div class="col-xs-9 col-sm-3">
+                      <input type="text" class="form-control input" id="project" placeholder="">
+                    </div>
+                    <label for="time" class="col-sm-2 control-label">开始时间：</label>
+                    <div class="col-xs-9 col-sm-3">
+                      <input type="text" class="form-control input" id="time" placeholder="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="project" class="col-sm-2 control-label">合作需求：</label>
+                    <div class="col-xs-8">
+                      <textarea class="form-control" rows="3" placeholder="详细产品描述、功能规划、数量、软件平台等"></textarea>
+                    </div>
+                  </div>
+                  <div><input type="button"　class="btn-submit" value="完成并发送"></div>
+                </form>
+                <div class="text tc">其他咨询：<a href="#">info@eicodesign.com</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- /企业信息 -->
+    <!-- 地图 -->
+    <div class="map leaflet-container leaflet-fade-anim" id="map">     
+    </div>
+    <!-- /地图 -->
+    <!-- 底部 -->
+    <div class="footer">
+        <div class="container">
+            <div class="row about">
+                <div class="col-xs-7 col-sm-8">
+                    <a class="pull-left mr40" href="#">合作机会</a>
+                    <a class="pull-left" href="#">加入我们</a>
+                </div>
+                <div class="col-xs-5 col-sm-4">
+                    <div class="social-icon pull-right" style="background: #30af2c;"><i class="iconfont icon-wechat"></i></div>
+                    <div class="social-icon pull-right" style="background: #dd302d;"><i class="iconfont icon-sina"></i></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="copyright">@eico design. All rights reserved.京ICP备08104990号-1京公网安备11010502026369</div>
+            </div>
+        </div>
+    </div>
+    <!-- /底部 -->
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/leaflet/leaflet.js"></script>
+    <script src="../js/common.js"></script>
+</body>
+</html>

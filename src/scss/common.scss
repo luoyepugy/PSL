@@ -28,6 +28,17 @@
     margin: 50px 0;
     padding: 0 15px;
 }
+// 主标语，子页面第一句
+.main-slogan {
+    margin-top: -120px;
+    background: #fff;
+    padding: 50px 15px;
+    text-align: center;
+    @media (max-width: 992px) { 
+        margin-top: 0;
+    }
+}
+
 .title {
     text-align: left;
     line-height: 45px;
@@ -35,6 +46,29 @@
 .text {
     color: #666;
     font-size: 16px;
+}
+// 纯文本
+.pure-text {
+    @extend .text;
+    padding: 80px;
+    padding-top: 0;
+    line-height: 27px;
+    dl {
+        margin-bottom: 25px;
+    }
+    .about {
+        font-size: 20px;
+    }
+    dt {
+        font-weight: 500;
+        line-height: 32px;
+    }
+    dd {
+        font-size: 15px;
+    }
+    @media (max-width: 992px) { 
+        padding: 40px;
+    } 
 }
 
 // 宽度100%
@@ -46,14 +80,19 @@
 .nav {
     background: #fff;  
     @include size(100%, 110px);
-    @include link-a(#000, $main_blue);
+    @include link-a(#333, $main_blue);
     line-height: 110px;
     box-shadow: 2px 1px 10px 2px #555;
     z-index: 100;
     li {
         margin-right: 50px;
-        @media (max-width: 992px) { 
-            margin-left: 20px;
+    }
+    @media (max-width: 992px) { 
+        @include line-height(75px);
+        li {
+            font-size: 20px;
+            margin-right: 0;
+            margin-left: 10px;
         } 
     }
     .container {
@@ -68,7 +107,7 @@
             content: '';
             position: absolute;
             bottom: -15px;
-            left: 20px;
+            left: 45%;
             @include size(10px);
             background: $main_blue;
             border-radius: 5px;
@@ -89,14 +128,17 @@
     @include link-a(#333, $main_blue);
     font-size: 16px;
     border-top: 1px solid #ddd;
+    a.active {
+        @include link($main_blue);
+    }
+    @media (max-width: 992px) {
+        position: relative;
+        a:first-child {
+            margin-left: 10px;
+        }
+    }
 }
 
-// 主标语，子页面第一句
-.main-slogan {
-    margin-top: -120px;
-    background: #fff;
-    padding: 50px 15px;
-}
 
 // 地图
 .map {

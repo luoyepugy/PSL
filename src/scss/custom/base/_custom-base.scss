@@ -3,6 +3,7 @@
 
 // 默认生成器
 @include padding-single(5, 5, 30);
+@include padding-single(10, 30, 60);
 @include margin-single(5, 5, 50);
 @include padding(5, 5, 40);
 @include margin(5, 5, 20);
