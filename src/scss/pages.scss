@@ -50,6 +50,47 @@
 
 
 // ===========================
+// =========== 服务 ===========
+// ===========================
+.service {
+    img {
+        width: 100%;
+    }
+    .pure-text .title {
+        margin-bottom: 30px;
+        font-size: 22px;
+        font-weight: 700;
+        color: #333;
+    }
+    .row {
+        margin-bottom: 80px;
+        &:first-child {
+            margin-bottom: 0;
+        }
+    }
+    .describe {
+        padding-top: 20%;
+        padding-left: 10%;
+        padding-right: 10%;
+        @media (max-width: 992px) { 
+            padding-top: 10%;
+            padding-bottom: 10%;
+        } 
+    }
+    .describe.first {
+        padding-top: 2%;
+        @media (max-width: 992px) { 
+            padding-top: 10%;
+            padding-bottom: 10%;
+        }
+    }
+    .text {
+        margin-bottom: 25px;
+    }
+}
+
+
+// ===========================
 // =========== 案例 ===========
 // ===========================
 
