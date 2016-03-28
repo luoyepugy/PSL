@@ -1,6 +1,4 @@
 
-
-@import 'custom/custom.scss';
 @import 'custom/mixin.scss';
 
 
@@ -132,15 +130,18 @@
 .teams {
     display: flex;
     align-items: stretch;
-    .col-sm-1 {
-        width: 12.5%;
+    @media (min-width: 992px) { 
+        .col-md-1 {
+            width: 12.5%;
+        }
+        .col-md-offset-1 {
+            margin-left: 12.5%;
+        }
+        .col-md-offset-2 {
+            margin-left: 25%;
+        }
     }
-    .col-sm-offset-1 {
-        margin-left: 12.5%;
-    }
-    .col-sm-offset-2 {
-        margin-left: 25%;
-    }
+    
     .describe {
         background: #e5e5e5;
         font-size: 12px;
