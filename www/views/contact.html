@@ -13,7 +13,7 @@
 </head>
 <body>
     <!-- 导航 -->
-    <div class="nav">
+    <div class="main-nav">
         <div class="container">
             <div class="row">
                 <div class="col-xs-9 col-sm-10">
@@ -33,7 +33,7 @@
     <!-- /导航 -->
     <!-- banner图 -->
     <div class="banner">
-        <img class="img-responsive" src="../images/about/core-banner.jpg" alt="banner图">
+        <img class="banner-img" style="background-image: url(../images/about/core-banner.jpg)">
     </div>
     <!-- /banner图 -->
     <!-- 企业信息 -->
@@ -52,61 +52,106 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12 pure-text">
+            <div class="col-xs-12 form">
                 <div class="slogan">联系我们</div>
                 <div class="text">一封邮件或许正是成就一个出色产品的开端。欢迎填写表格或发送合作邮件至：
                     <a href="mailto:service@eicodesign.com">service@eicodesign.com</a>
                 </div>
-                <form class="form-horizontal text">
-                  <div class="form-group">
-                        <label for="name" class="col-xs-3 col-sm-2 control-label">您的姓名：</label>
-                        <div class="col-xs-9 col-sm-3">
-                          <input type="text" class="form-control input" id="name" placeholder="">
-                        </div>
-                        <label for="company" class="col-xs-3 col-sm-2 control-label">公司名称：</label>
-                        <div class="col-xs-9 col-sm-3">
-                          <input type="text" class="form-control input" id="company" placeholder="">
-                        </div>
+                <form class="row text mt20">                   
+                    <div class="col-xs-12 col-sm-6 form-block">
+                        <label for="name">您的姓名：</label>
+                        <span class="require">*</span>
+                        <input type="text" class="input" id="name" placeholder="">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 form-block">
+                        <label for="company">公司名称：</label>
+                        <span class="require">*</span>
+                        <input type="text" class="input" id="company" placeholder="">
+                    </div>
+                  <div class="col-xs-12 col-sm-6 form-block">
+                    <label for="email">您的邮箱：</label>
+                    <span class="require">*</span>
+                      <input type="email"class="input" id="email" placeholder="">
                   </div>
-                  <div class="form-group">
-                    <label for="email" class="col-sm-2 control-label">您的邮箱：</label>
-                    <div class="col-xs-9 col-sm-3">
-                      <input type="email" class="form-control input" id="email" placeholder="">
-                    </div>
-                    <label for="telphone" class="col-sm-2 control-label">联系电话：</label>
-                    <div class="col-xs-9 col-sm-3">
-                      <input type="text" class="form-control input" id="telphone" placeholder="">
-                    </div>
+                  <div class="col-xs-12 col-sm-6 form-block">
+                    <label for="telphone">联系电话：</label>
+                    <span class="require">*</span>
+                    <input type="text" class="input" id="telphone" placeholder="">
                   </div>
-                  <div class="form-group">
-                    <label for="website" class="col-sm-2 control-label">公司网站：</label>
-                    <div class="col-xs-9 col-sm-3">
-                      <input type="text" class="form-control input" id="website" placeholder="">
-                    </div>
-                    <label for="city" class="col-sm-2 control-label">所在城市：</label>
-                    <div class="col-xs-9 col-sm-3">
-                      <input type="text" class="form-control input" id="city" placeholder="">
-                    </div>
+                  <div class="col-xs-12 col-sm-6 form-block">
+                    <label for="website">公司网站：</label>
+                      <input type="text" class="input" id="website" placeholder="">
                   </div>
-                  <div class="form-group">
-                    <label for="project" class="col-sm-2 control-label">项目类型：</label>
-                    <div class="col-xs-9 col-sm-3">
-                      <input type="text" class="form-control input" id="project" placeholder="">
-                    </div>
-                    <label for="time" class="col-sm-2 control-label">开始时间：</label>
-                    <div class="col-xs-9 col-sm-3">
-                      <input type="text" class="form-control input" id="time" placeholder="">
-                    </div>
+                  <div class="col-xs-12 col-sm-6 form-block j-select">
+                    <label>所在城市：</label>
+                    <span class="glyphicon glyphicon-menu-down require"></span>
+                    <ul class="pop-layer-inline none">
+                        <li>北京</li>
+                        <li>上海</li>
+                        <li>广州</li>
+                        <li>深圳</li>
+                        <li>珠海</li>
+                        <li>厦门</li>
+                        <li>杭州</li>
+                        <li>南京</li>
+                        <li>武汉</li>
+                        <li>西安</li>
+                        <li>成都</li>
+                        <li>重庆</li>
+                        <li>青岛</li>
+                        <li>沈阳</li>
+                        <li>其他</li>
+                    </ul>
+                    <span class="input pointer j-selectValue"></span>
+                    <input class="j-selectInput none" type="text" class="hidden" value="">
                   </div>
-                  <div class="form-group">
-                    <label for="project" class="col-sm-2 control-label">合作需求：</label>
-                    <div class="col-xs-8">
-                      <textarea class="form-control" rows="3" placeholder="详细产品描述、功能规划、数量、软件平台等"></textarea>
-                    </div>
+                  <div class="col-xs-12 col-sm-6 form-block j-select">
+                    <label>项目类型：</label>
+                    <span class="glyphicon glyphicon-menu-down require"></span>
+                    <ul class="pop-layer-inline none">
+                        <li>移动</li>
+                        <li>车载</li>
+                        <li>家电</li>
+                        <li>金融</li>
+                        <li>医疗</li>
+                        <li>健康</li>
+                        <li>物流</li>
+                        <li>安全</li>
+                        <li>电子</li>
+                        <li>通信</li>
+                        <li>零售</li>
+                        <li>金融</li>
+                        <li>教育</li>
+                        <li>能源</li>
+                        <li>旅游</li>
+                        <li>媒体</li>
+                        <li>娱乐</li>
+                        <li>创业</li>
+                        <li>NGO</li>
+                        <li>其他</li>
+                      </ul>
+                    <span class="input pointer j-selectValue"></span>
+                    <input class="j-selectInput none" type="text" class="hidden" value="">
                   </div>
-                  <div><input type="button"　class="btn-submit" value="完成并发送"></div>
+                  <div class="col-xs-12 col-sm-6 form-block j-select">
+                    <label>开始时间：</label>
+                    <span class="glyphicon glyphicon-menu-down require"></span>
+                    <ul class="pop-layer none">
+                        <li>需要现在开始</li>
+                        <li>1-2个月开始</li>
+                        <li>2-4个月开始</li>
+                        <li>暂时不着急</li>
+                    </ul>
+                    <span class="input pointer j-selectValue"></span>
+                    <input class="j-selectInput none" type="text" class="hidden" value="">
+                  </div>
+                  <div class="col-xs-12 form-block" style="height: 115px;">
+                    <label for="project">合作需求：</label>
+                    <textarea class="textarea" rows="3" placeholder="详细产品描述、功能规划、数量、软件平台等"></textarea>
+                  </div>
+                  <div class="col-xs-12"><input type="button" class="btn-submit" value="完成并发送" /></div>
                 </form>
-                <div class="text tc">其他咨询：<a href="#">info@eicodesign.com</a></div>
+                <!-- <div class="text tc">其他咨询：<a href="#">info@eicodesign.com</a></div> -->
             </div>
         </div>
     </div>
@@ -138,5 +183,6 @@
     <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="../lib/leaflet/leaflet.js"></script>
     <script src="../js/common.js"></script>
+    <script src="../js/contact.js"></script>
 </body>
 </html>
