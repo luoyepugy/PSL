@@ -13,23 +13,29 @@
 </head>
 <body>
     <!-- 导航 -->
-    <div class="main-nav">
+    <nav class="main-nav navbar navbar-default" role="navigation">
         <div class="container">
-            <div class="row">
-                <div class="col-xs-9 col-sm-10">
-                    <ul>
-                        <li class="pull-left"><a href="case.html">案例</a></li>
-                        <li class="pull-left"><a href="service.html">服务</a></li>
-                        <li class="pull-left"><a href="about.html">关于</a></li>
-                        <li class="pull-left"><a class="active" href="#">联系我们</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-3 col-sm-2">
-                    <div class="logo pull-right"><a href="#"><img class="img-responsive" src="../images/logo.png" alt="logo"></a></div>
-                </div>
-            </div>    
-        </div>
-    </div>
+           <div class="navbar-header">
+              <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" 
+                 data-target="#example-navbar-collapse">
+                 <span class="sr-only">切换导航</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+              </button>
+              <a href="../index.html" class="pull-right visible-xs"><img class="img-responsive" src="../images/logo.png" alt="logo"></a>
+           </div>
+           <div class="collapse navbar-collapse" id="example-navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="case.html">案例</a></li>
+                <li><a href="service.html">服务</a></li>
+                <li><a href="about.html">关于</a></li>
+                <li><a class="active" href="contact.html">联系我们</a></li>
+              </ul>
+              <a href="../index.html" class="pull-right hidden-xs"><img class="img-responsive" src="../images/logo.png" alt="logo"></a>
+           </div>
+       </div>
+    </nav>
     <!-- /导航 -->
     <!-- banner图 -->
     <div class="banner">
@@ -57,30 +63,30 @@
                 <div class="text">一封邮件或许正是成就一个出色产品的开端。欢迎填写表格或发送合作邮件至：
                     <a href="mailto:service@eicodesign.com">service@eicodesign.com</a>
                 </div>
-                <form class="row text mt20">                   
+                <form class="row text mt20" method="get" action="http://www.baidu.com">                   
                     <div class="col-xs-12 col-sm-6 form-block">
                         <label for="name">您的姓名：</label>
                         <span class="require">*</span>
-                        <input type="text" class="input" id="name" placeholder="">
+                        <input name="name" type="text" class="input j-input" id="name" placeholder="">
                     </div>
                     <div class="col-xs-12 col-sm-6 form-block">
                         <label for="company">公司名称：</label>
                         <span class="require">*</span>
-                        <input type="text" class="input" id="company" placeholder="">
+                        <input name="company" type="text" class="input j-input" id="company" placeholder="">
                     </div>
                   <div class="col-xs-12 col-sm-6 form-block">
                     <label for="email">您的邮箱：</label>
                     <span class="require">*</span>
-                      <input type="email"class="input" id="email" placeholder="">
+                      <input name="email" type="email"class="input j-input" id="email" placeholder="">
                   </div>
                   <div class="col-xs-12 col-sm-6 form-block">
                     <label for="telphone">联系电话：</label>
                     <span class="require">*</span>
-                    <input type="text" class="input" id="telphone" placeholder="">
+                    <input name="telephone" type="text" class="input j-input j-telephone" id="telphone" placeholder="">
                   </div>
                   <div class="col-xs-12 col-sm-6 form-block">
                     <label for="website">公司网站：</label>
-                      <input type="text" class="input" id="website" placeholder="">
+                      <input name="website" type="text" class="input" id="website" placeholder="">
                   </div>
                   <div class="col-xs-12 col-sm-6 form-block j-select">
                     <label>所在城市：</label>
@@ -103,7 +109,7 @@
                         <li>其他</li>
                     </ul>
                     <span class="input pointer j-selectValue"></span>
-                    <input class="j-selectInput none" type="text" class="hidden" value="">
+                    <input name="city" class="j-selectInput none" type="text" class="hidden" value="">
                   </div>
                   <div class="col-xs-12 col-sm-6 form-block j-select">
                     <label>项目类型：</label>
@@ -131,7 +137,7 @@
                         <li>其他</li>
                       </ul>
                     <span class="input pointer j-selectValue"></span>
-                    <input class="j-selectInput none" type="text" class="hidden" value="">
+                    <input name="project" class="j-selectInput none" type="text" class="hidden" value="">
                   </div>
                   <div class="col-xs-12 col-sm-6 form-block j-select">
                     <label>开始时间：</label>
@@ -143,13 +149,13 @@
                         <li>暂时不着急</li>
                     </ul>
                     <span class="input pointer j-selectValue"></span>
-                    <input class="j-selectInput none" type="text" class="hidden" value="">
+                    <input name="time" class="j-selectInput none" type="text" class="hidden" value="">
                   </div>
                   <div class="col-xs-12 form-block" style="height: 115px;">
                     <label for="project">合作需求：</label>
                     <textarea class="textarea" rows="3" placeholder="详细产品描述、功能规划、数量、软件平台等"></textarea>
                   </div>
-                  <div class="col-xs-12"><input type="button" class="btn-submit" value="完成并发送" /></div>
+                  <div class="col-xs-12"><input type="button" class="btn-submit j-submit" value="完成并发送" /></div>
                 </form>
                 <!-- <div class="text tc">其他咨询：<a href="#">info@eicodesign.com</a></div> -->
             </div>

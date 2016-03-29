@@ -84,41 +84,76 @@
     background-repeat: no-repeat;
 }
 // 导航
+.main-nav.navbar {
+    margin-bottom: 0;
+}
 .main-nav {
-    background: #fff;  
-    @include size(100%, 110px);
-    @include link-a(#333, $main_blue);
-    line-height: 110px; 
-    li {
-        margin-right: 50px;
+    .container,
+    .navbar-collapse {
+        padding-left: 0;
+        padding-right: 0;
     }
-    .container {
-        background: transparent;
+    .navbar-toggle {
+        top: 27px;
+        left: 20px;
     }
-    a {
+    .navbar-nav {
+        top: 25px;
         position: relative;
-    }
-    a.active {
-        color: $main_blue;
-        &:before {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 45%;
-            @include size(10px);
-            background: $main_blue;
-            border-radius: 5px;
+        &>li {
+            @include link-a(#333, $main_blue);
+        }
+        a.active {
+            color: $main_blue;
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: -15px;
+                left: 45%;
+                @include size(10px);
+                background: $main_blue;
+                border-radius: 5px;
+            }
         }
     }
 }
+// .main-nav {  
+//     @include size(100%, 110px);
+//     @include link-a(#333, $main_blue);
+//     line-height: 110px; 
+//     li {
+//         margin-right: 50px;
+//     }
+//     .container {
+//         background: transparent;
+//     }
+//     a {
+//         position: relative;
+//     }
+//     a.active {
+//         color: $main_blue;
+//         &:before {
+//             content: '';
+//             position: absolute;
+//             bottom: -15px;
+//             left: 45%;
+//             @include size(10px);
+//             background: $main_blue;
+//             border-radius: 5px;
+//         }
+//     }
+// }
 .main-navIndex {
     @include position-basic(absolute,top,0, left,0);
     background: rgba(255,255,255,.5);
     box-shadow: 2px 1px 10px 2px #555;
     z-index: 100;
-}
-.main-nav-xs {
-    background: #fff;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    .container {
+        background: transparent;
+    }
 }
 
 // 子导航

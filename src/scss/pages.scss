@@ -61,7 +61,6 @@
         color: #333;
     }
     .row {
-        margin-bottom: 80px;
         &:first-child {
             margin-bottom: 0;
         }
@@ -71,7 +70,7 @@
         padding-left: 10%;
         padding-right: 10%;
     }
-    .describe.first {
+    .first {
         padding-top: 2%;
     }
     .text {
