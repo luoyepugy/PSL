@@ -38,7 +38,8 @@
 	}
 
 	.service {
-		.describe {
+		.describe,
+		.describe-even {
 			padding: 10% 0;
 		}
 		.discribe.first {
@@ -47,10 +48,8 @@
 	}
 
 	.slogan-core {
-		padding: 0 20px;
+		padding: 0 40px;
 	}
-
-	
 
 	.contact {
 		.info {

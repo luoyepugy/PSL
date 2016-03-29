@@ -67,8 +67,12 @@
     }
     .describe {
         padding-top: 20%;
-        padding-left: 10%;
         padding-right: 10%;
+        // padding-left: 10%;
+    }
+    .describe-even {
+        padding-top: 20%;
+        padding-left: 10%;
     }
     .first {
         padding-top: 2%;
@@ -89,7 +93,7 @@
         font-weight: 700;
     }
     .describe {
-        padding-top: 20%;
+        padding-top: 25%;
         padding-left: 10%;
         padding-right: 10%;
     }
@@ -103,6 +107,11 @@
 .about-core {
     img {
         margin: 0 auto;
+    }
+}
+.about-teachers {
+    .describe {
+        padding-top: 20%;
     }
 }
 .slogan-core {
