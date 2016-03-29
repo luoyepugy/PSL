@@ -12,21 +12,32 @@ $(function() {
 
 	// 表单提交
 	$('.j-submit').click(function() {
-		var flag = true,
-			phone_regexp = /^((145|147)|(15[^4])|(17[6-8])|((13|18)[0-9]))\d{8}$/;
-			// email_regexp = 
+		var flag = true;
+		var phone = $('.j-telephone').val();
+		var email = $('.j-email').val();
 
 		$(this).closest('form').find('.j-input').each(function() {
-			var phone = $('.j-telephone').val();
+			
 			if($(this).val().trim() == '') {
 				$(this).css('border-color','red');
 				flag = false;
+				return false;
 			}
-			if(phone_regexp.test(phone)) {
-				$(this).css('border-color','red');
-				flag = false;
-			}
+			console.log($(this).val());
+			
 		});
+		if(!RegExpHelper.isMobile(phone)) {
+			$('.j-telephone').css('border-color','red');
+			flag = false;
+		} else {
+			$('.j-telephone').css('border-color','#dcdcdc');
+		}
+		if(!RegExpHelper.isEmail(email)) {
+			$('.j-email').css('border-color','red');
+			flag = false;
+		} else {
+			$('.j-email').css('border-color','#dcdcdc');
+		}
 		if(flag) {
 			$(this).closest('form').submit();
 		}

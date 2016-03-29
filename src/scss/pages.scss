@@ -149,6 +149,8 @@
     }
     label {
         font-weight: 500;
+        position: relative;
+        z-index: 10;
     }
     .btn-submit {
         @include skin-bgfg($main_blue, #fff);
