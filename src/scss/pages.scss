@@ -8,16 +8,14 @@
 
 // 特色
 .feature {
-    img {
-        width: 100%;
-    }
     .describe {
         padding: 35px 20px;
     }
 }
 
 .block {
-    height: 280px;
+    height: 300px;
+    padding: 20px;
     color: #fff;
     &:first-child {
         background: #fecd04;
@@ -28,8 +26,14 @@
     &:last-child {
         background: #19982a;
     }
-    div {
-        padding: 230px 0 0 30px;
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    .text {
+        margin-top: 20px;
+        color: #fff;
+        font-size: 24px;
     }
 }
 
@@ -224,6 +228,12 @@
             @extend .pop-layer-inline;
             li {
                 width: 100%;
+            }
+
+        }
+        .pop-layer.last {
+            li:hover {
+                @include skin-bgfg($main_blue, #fff);
             }
         }
     }
