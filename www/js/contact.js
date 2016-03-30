@@ -27,6 +27,8 @@ $(function() {
 				$(this).css('border-color','red');
 				flag = false;
 				return;
+			} else {
+				$(this).css('border-color','#dcdcdc');
 			}
 			// console.log($(this).val());	
 		});
