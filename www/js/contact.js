@@ -26,7 +26,7 @@ $(function() {
 			if($(this).val().trim() == '') {
 				$(this).css('border-color','red');
 				flag = false;
-				return false;
+				return;
 			}
 			// console.log($(this).val());	
 		});
