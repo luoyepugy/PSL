@@ -170,7 +170,7 @@
         @include size(480px, 45px);
         line-height: 45px;
         border: 0;
-        width: 100%;
+        width: 99%;
         &:hover {
             background: darken($main_blue, 10%);
         }
@@ -185,7 +185,7 @@
         }
         .input {
             padding-left: 90px;
-            width: 100%;
+            width: 98%;
             height: 38px;
             @include position();
             border: 1px solid #dcdcdc;
@@ -198,10 +198,12 @@
         }
         .textarea {
             @extend .input;
+            width: 99%;
             height: 115px;
         }
         .require {
             float: right;
+            margin-right: 10px;
         }
         .glyphicon {
             line-height: 38px;

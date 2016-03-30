@@ -58,7 +58,23 @@
 		.form {
 			padding: 40px;
 			padding-top: 0;
+			.input {
+				width: 100%;
+			}
+			.btn-submit {
+				width: 100%;
+				@include skin-basic(#fff, $main_blue, 2px solid $main-blue);
+				border-radius: 4px;
+			}
+			.btn-block {
+				@include inside-center(220px, 45px);
+				@include skin-basic(#fff, $main_blue, 2px solid $main-blue);
+				border-radius: 4px;
+				display: block;
+				margin: 0 auto;
+			}
 		}
+
 	}
 }
 
