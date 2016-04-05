@@ -21,6 +21,7 @@
 @include size-icon(210,90);
 @include size-icon(310,380);
 @include size-icon(230,185);
+@include size-icon(170);
 
 // 标题
 .slogan {
@@ -230,6 +231,38 @@
     }
 }
 
+
+// 微信弹窗
+.modal-wechat {
+    background: rgba(0,0,0,.5);
+    @include position(fixed);
+    @include size(100%, 100%);
+    z-index: 100;
+    .vcode {
+        background: #fff;
+        @include size(410px);
+        margin: 0 auto;
+        position: relative;
+        top: 30%;
+        text-align: center;
+        font-size: 16px;
+        padding: 70px 0 40px 0;
+    }
+    .btn-confirm {
+        @include size(150px, 45px);
+        margin: 0 auto;
+    }
+}
+.button {
+    @include skin-bgfg($main_blue, #fff);
+    border: 0;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+    &:hover {
+        background: darken($main_blue, 10%);
+    }
+}
 
 // 颜色
 @include color('gray', '#bfbfbf');

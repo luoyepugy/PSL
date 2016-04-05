@@ -24,4 +24,13 @@ $(function() {
 		id: 'mapbox.streets'
 	}).addTo(map);
 
+
+	// 微信二维码扫描
+	$('.j-wechat').click(function() {
+		$('.modal-wechat').removeClass('none');
+	});
+	$('.j-modalClose').click(function() {
+		$('.modal-wechat').addClass('none');
+	})
+
 });
